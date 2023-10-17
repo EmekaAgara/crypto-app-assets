@@ -192,11 +192,24 @@ function Recommended() {
             </View>
             <View style={{ paddingVertical: 6 }}>
               <FlatList
+                style={{
+                  // flexDirection: "row",
+                  // alignItems: "center",
+                  width: "100%",
+                }}
                 data={output}
+                // numColumns={1}
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item, index }) => (
-                  <View style={{ flexDirection: "row", alignItems: "center" }}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      Linking.openURL(
+                        `https://instagram.com/${item.string_list_data[0].value}`
+                      )
+                    }
+                    style={styles.FollowCard}
+                  >
                     <Image
                       source={{
                         uri: `https://ui-avatars.com/api/?name=${item.string_list_data[0].value}&background=0D8ABC&color=fff`,
@@ -206,7 +219,7 @@ function Recommended() {
                         height: 50,
                         borderRadius: 25,
                         marginRight: 10,
-                        marginBottom: 11,
+                        marginBottom: 1,
                       }}
                     />
                     <Text
@@ -219,7 +232,7 @@ function Recommended() {
                     >
                       {item.string_list_data[0].value}
                     </Text>
-                  </View>
+                  </TouchableOpacity>
                 )}
               />
             </View>
@@ -333,6 +346,22 @@ const styles = StyleSheet.create({
     padding: 18,
   },
 
+  FollowCard: {
+    backgroundColor: "#202020",
+    width: "100%",
+    // borderColor:'#899',
+    borderWidth: 1,
+    borderRadius: 5,
+    // paddingHorizontal: 10,
+    // marginVertical: 6,
+    padding: 14,
+    marginBottom: 10,
+
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+  },
+
   ButtonText: {
     color: "#818589",
   },
@@ -346,12 +375,12 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     justifyContent: "flex-start",
-    alignItems: "left",
+    // alignItems: "left",
     backgroundColor: "black",
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     paddingVertical: 23,
-    paddingHorizontal: 35,
+    paddingHorizontal: 15,
     bottom: 0,
     borderWidth: 0.3,
     borderColor: "gray",
