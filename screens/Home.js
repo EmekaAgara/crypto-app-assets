@@ -17,9 +17,8 @@ const data = [
     id: "1",
     // image: require("../assets/chatbot.png"),
     image: require("../assets/chatbot.json"),
-    title: "Ask Karah",
-    description:
-      "Karah is your AI Personal shopping assistant, feel free to ask her for recommendations",
+    title: "Instagram Unfollowers",
+    description: "Get a list of your instagram unnfollowers",
     screen: "Karah",
   },
 
@@ -27,8 +26,8 @@ const data = [
     id: "2",
     // image: require("../assets/recommended.png"),
     image: require("../assets/shop.json"),
-    title: "Recommended Products",
-    description: "Shop recommended products based on conversations with Karah",
+    title: "Engagements Community",
+    description: "For Twitter and Instagram Engagements",
     screen: "Recommended",
   },
 
@@ -36,8 +35,8 @@ const data = [
     id: "3",
     // image: require("../assets/shopproducts.png"),
     image: require("../assets/recommended.json"),
-    title: "Shop Products",
-    description: "View and shop all available products from the store",
+    title: "Tech School",
+    description: "Learn a Tech Skill",
     screen: "ProductsScreen",
   },
 
@@ -45,7 +44,7 @@ const data = [
     id: "5",
     // image: require("../assets/shopproducts.png"),
     image: require("../assets/vr.json"),
-    title: "View Products in AR",
+    title: "About Us",
     description: "View products in 3D/AR Rendered scene",
     screen: "ArProductsScreen",
   },
@@ -54,7 +53,7 @@ const data = [
     id: "4",
     // image: require("../assets/seller.png"),
     image: require("../assets/store.json"),
-    title: "Create a Store",
+    title: "Contact Us",
     description: "Create a seller account and sell Products",
     screen: "ProductsScreen",
   },
@@ -137,7 +136,7 @@ const styles = StyleSheet.create({
   mainText: {
     color: "white",
     fontSize: 16,
-    fontWeight: 700,
+    fontWeight: 500,
     textAlign: "left",
     paddingBottom: 5,
     paddingLeft: 90,
@@ -145,8 +144,8 @@ const styles = StyleSheet.create({
 
   descText: {
     color: "#898A8B",
-    fontSize: 14,
-    fontWeight: 300,
+    fontSize: 12,
+    fontWeight: 400,
     textAlign: "left",
     paddingLeft: 90,
   },
