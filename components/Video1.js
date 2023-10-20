@@ -22,26 +22,35 @@ const Video1 = () => {
     navigation.navigate("SplashScreen1");
   };
 
+  const onGetStartedPress = () => {
+    navigation.navigate("Home");
+  };
+
   return (
     <View style={styles.container}>
       <Video
         ref={video}
         style={styles.video}
         // source={{uri:'https://emekaagara.com/wp-content/uploads/2023/04/pexels-cottonbro-studio-4008365-1080x2048-50fps.mp4'}}
-        source={require("../assets/promote_business.mp4")}
+        source={require("../assets/instagramunfollowers.mp4")}
         shouldPlay
         resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Personalized Shopping Experience</Text>
+      <Text style={styles.mainText}>Unfollowers For Instagram</Text>
       <Text style={styles.subText}>
-        Get Reccommendations based on your preferences & conversations your AI
-        Assistant
+        Get a currated List of People that Unfollowed you on Instagram
       </Text>
 
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer}>
+      <TouchableOpacity
+        onPress={onGetStartedPress}
+        style={styles.ButtonContainer}
+      >
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
         <Text style={styles.ButtonText}>Next</Text>
       </TouchableOpacity>
     </View>
@@ -65,29 +74,53 @@ const styles = StyleSheet.create({
     right: 0,
   },
 
+  // ButtonContainer: {
+  //   position: "absolute",
+  //   backgroundColor: "#E53F71",
+  //   bottom: 35,
+  //   width: "90%",
+  //   alignSelf: "center",
+  //   padding: 25,
+  //   borderRadius: 10,
+  //   alignItems: "center",
+  // },
+
   ButtonContainer: {
-    position: "absolute",
-    backgroundColor: "#E53F71",
-    bottom: 35,
+    backgroundColor: "#171515",
     width: "90%",
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginVertical: 6,
+    padding: 18,
     alignSelf: "center",
-    padding: 25,
-    borderRadius: 10,
-    alignItems: "center",
+    position: "absolute",
+    bottom: 45,
+  },
+
+  ButtonContainer2: {
+    backgroundColor: "#7476ED",
+    width: "90%",
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginVertical: 6,
+    padding: 18,
+    alignSelf: "center",
+    position: "absolute",
+    bottom: 110,
   },
 
   ButtonText: {
-    fontSize: 16,
+    fontSize: 14,
     color: "#fff",
-    fontWeight: 500,
+    fontWeight: 700,
     alignSelf: "center",
   },
 
   mainText: {
     color: "white",
-    fontSize: 30,
+    fontSize: 26,
     fontWeight: 600,
-    bottom: 150,
+    bottom: 210,
     width: "90%",
     padding: 25,
     paddingBottom: 25,
@@ -97,8 +130,8 @@ const styles = StyleSheet.create({
   subText: {
     color: "white",
     fontSize: 15,
-    fontWeight: 300,
-    bottom: 100,
+    fontWeight: 400,
+    bottom: 170,
     width: "90%",
     padding: 25,
     paddingBottom: 25,
