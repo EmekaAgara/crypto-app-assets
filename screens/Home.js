@@ -11,12 +11,12 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native";
 import Lottie from "lottie-react-native";
-
+import CustomInput from "../components/CustomInput";
 const data = [
   {
     id: "1",
     // image: require("../assets/chatbot.png"),
-    image: require("../assets/chatbot.json"),
+    image: require("../assets/tride.png"),
     title: "Instagram Unfollowers",
     description: "Get a list of your instagram unnfollowers",
     screen: "Karah",
@@ -25,7 +25,7 @@ const data = [
   {
     id: "2",
     // image: require("../assets/recommended.png"),
-    image: require("../assets/shop.json"),
+    image: require("../assets/tride.png"),
     title: "Engagements Community",
     description: "For Twitter and Instagram Engagements",
     screen: "Recommended",
@@ -34,7 +34,7 @@ const data = [
   {
     id: "3",
     // image: require("../assets/shopproducts.png"),
-    image: require("../assets/recommended.json"),
+    image: require("../assets/tride.png"),
     title: "Tech School",
     description: "Learn a Tech Skill",
     screen: "ProductsScreen",
@@ -43,7 +43,7 @@ const data = [
   {
     id: "5",
     // image: require("../assets/shopproducts.png"),
-    image: require("../assets/vr.json"),
+    image: require("../assets/tride.png"),
     title: "About Us",
     description: "View products in 3D/AR Rendered scene",
     screen: "ArProductsScreen",
@@ -52,7 +52,7 @@ const data = [
   {
     id: "4",
     // image: require("../assets/seller.png"),
-    image: require("../assets/store.json"),
+    image: require("../assets/tride.png"),
     title: "Contact Us",
     description: "Create a seller account and sell Products",
     screen: "ProductsScreen",
@@ -74,7 +74,9 @@ const Home = () => {
 
   return (
     <View style={styles.container} behavior="padding">
-      <Text style={styles.HelloText}>Welcome to Karah </Text>
+      <Text style={styles.HelloText}>Tride Social</Text>
+      <CustomInput name="search" placeholder="Search" />
+      <Text style={styles.HelloText2}>Tride Social</Text>
 
       <FlatList
         data={data}
@@ -84,16 +86,11 @@ const Home = () => {
             onPress={() => navigation.navigate(item.screen)}
             style={styles.ButtonContainer}
           >
-            {/* <Image source={item.image} style={styles.cardImage} /> */}
-            <Lottie
-              source={item.image}
-              autoPlay
-              loop
-              style={styles.cardImage}
-            />
-
-            <Text style={styles.mainText}>{item.title}</Text>
-            <Text style={styles.descText}>{item.description}</Text>
+            <Image source={item.image} style={styles.cardImage} />
+            <View style={styles.profileContainer}>
+              <Text style={styles.mainText}>{item.title}</Text>
+              <Text style={styles.descText}>{item.description}</Text>
+            </View>
           </TouchableOpacity>
         )}
       />
@@ -111,26 +108,28 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     paddingTop: 120,
     padding: 6,
+    paddingHorizontal: 15,
+    // display: "flex",
   },
 
   HelloText: {
     color: "white",
-    fontSize: 30,
-    fontWeight: 700,
-    textAlign: "center",
-    paddingBottom: 20,
+    fontSize: 20,
+    fontWeight: 600,
+    textAlign: "left",
+    paddingBottom: 10,
   },
 
   cardImage: {
     // padding: 55,
     // margin: 20,
-    marginLeft: 3,
-    marginTop: 1,
-    height: 120,
-    width: 105,
+    marginLeft: 4,
+    // marginTop: 1,
+    height: 70,
+    width: 70,
     resizeMode: "contain",
-    alignSelf: "flex-start",
-    position: "absolute",
+    // alignSelf: "middle",
+    // position: "absolute",
   },
 
   mainText: {
@@ -139,7 +138,7 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     textAlign: "left",
     paddingBottom: 5,
-    paddingLeft: 90,
+    paddingLeft: 0,
   },
 
   descText: {
@@ -147,23 +146,34 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 400,
     textAlign: "left",
-    paddingLeft: 90,
+    paddingLeft: 0,
   },
 
   ButtonContainer: {
     backgroundColor: "#141518",
-    borderRadius: 5,
-    paddingVertical: 30,
-    paddingHorizontal: 40,
-    marginBottom: 10,
+    flexDirection: "row",
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
+    shadowOpacity: 0.26,
+    elevation: 4,
+    padding: 16,
+    marginBottom: 16,
   },
 
   CardContainer: {
     backgroundColor: "#5659C6",
     borderRadius: 5,
-    paddingVertical: 20,
+    paddingVertical: 0,
     paddingHorizontal: 140,
-    marginBottom: 10,
+    marginBottom: 0,
     height: 100,
+  },
+  profileContainer: {
+    flexDirection: "column",
+    marginLeft: 0,
+    paddingLeft: 16,
+    // flex: 1,
+    justifyContent: "center",
   },
 });

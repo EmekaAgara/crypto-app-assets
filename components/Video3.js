@@ -21,6 +21,9 @@ const Video3 = () => {
   const onNextPress = () => {
     navigation.navigate("SplashScreen3");
   };
+  const onGetStartedPress = () => {
+    navigation.navigate("Home");
+  };
 
   return (
     <View style={styles.container}>
@@ -40,7 +43,13 @@ const Video3 = () => {
         Connect with people and build strong networks and relationships.
       </Text>
 
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer}>
+      <TouchableOpacity
+        onPress={onGetStartedPress}
+        style={styles.ButtonContainer}
+      >
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
         <Text style={styles.ButtonText}>Next</Text>
       </TouchableOpacity>
     </View>

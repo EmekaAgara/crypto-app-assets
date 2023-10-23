@@ -22,6 +22,10 @@ const Video4 = () => {
     navigation.navigate("SplashScreen4");
   };
 
+  const onGetStartedPress = () => {
+    navigation.navigate("Home");
+  };
+
   return (
     <View style={styles.container}>
       <Video
@@ -40,7 +44,13 @@ const Video4 = () => {
         Partner with influencers to increase brand awareness, and drive sales.
       </Text>
 
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer}>
+      <TouchableOpacity
+        onPress={onGetStartedPress}
+        style={styles.ButtonContainer}
+      >
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
         <Text style={styles.ButtonText}>Next</Text>
       </TouchableOpacity>
     </View>

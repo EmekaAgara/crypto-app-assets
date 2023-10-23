@@ -19,7 +19,10 @@ const Video6 = () => {
   const navigation = useNavigation();
 
   const onNextPress = () => {
-    navigation.navigate("Login");
+    navigation.navigate("SplashScreen");
+  };
+  const onGetStartedPress = () => {
+    navigation.navigate("Home");
   };
 
   return (
@@ -28,19 +31,25 @@ const Video6 = () => {
         ref={video}
         style={styles.video}
         // source={{uri:'https://emekaagara.com/wp-content/uploads/2023/04/pexels-cottonbro-studio-4008365-1080x2048-50fps.mp4'}}
-        source={require("../assets/explore.mp4")}
+        source={require("../assets/gaming.mp4")}
         shouldPlay
         resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Welcome To Karah</Text>
+      <Text style={styles.mainText}>Gaming Community</Text>
       <Text style={styles.subText}>
-        Connect with people, Shop products you love and checkout with Square
+        Join our Gaming Community ,to connect with Gamers
       </Text>
 
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer}>
+      <TouchableOpacity
+        onPress={onGetStartedPress}
+        style={styles.ButtonContainer}
+      >
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
         <Text style={styles.ButtonText}>Next</Text>
       </TouchableOpacity>
     </View>

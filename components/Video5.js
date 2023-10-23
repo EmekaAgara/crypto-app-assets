@@ -21,6 +21,9 @@ const Video5 = () => {
   const onNextPress = () => {
     navigation.navigate("Welcome");
   };
+  const onGetStartedPress = () => {
+    navigation.navigate("Home");
+  };
 
   return (
     <View style={styles.container}>
@@ -28,19 +31,25 @@ const Video5 = () => {
         ref={video}
         style={styles.video}
         // source={{uri:'https://emekaagara.com/wp-content/uploads/2023/04/pexels-cottonbro-studio-4008365-1080x2048-50fps.mp4'}}
-        source={require("../assets/ar.mp4")}
+        source={require("../assets/trainings.mp4")}
         shouldPlay
         resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>View Products in AR</Text>
+      <Text style={styles.mainText}>Learning Community</Text>
       <Text style={styles.subText}>
-        See how products will look on you before you make a purchase.
+        Join in and Become a part of our Learning Community.
       </Text>
 
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer}>
+      <TouchableOpacity
+        onPress={onGetStartedPress}
+        style={styles.ButtonContainer}
+      >
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
         <Text style={styles.ButtonText}>Next</Text>
       </TouchableOpacity>
     </View>
