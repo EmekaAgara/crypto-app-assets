@@ -26,7 +26,7 @@ export class SearchInput extends Component {
 
 const styles = StyleSheet.create({
   textInput: {
-    backgroundColor: "#212125",
+    backgroundColor: "#141518",
     height: 55,
     width: "90%",
     marginHorizontal: 20,

@@ -17,14 +17,14 @@ import Home from "./screens/Home";
 import Cart from "./screens/Cart";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import ProductDetails from "./screens/ProductDetails";
-import ProductsScreen from "./screens/ProductsScreen";
+import ContactScreen from "./screens/ContactScreen";
+import EngagementScreen from "./screens/EngagementScreen";
 import Pay from "./screens/Pay";
-import Karah from "./screens/Karah";
-import Recommended from "./screens/Recommended";
+import TechSchoolScreen from "./screens/TechSchoolScreen";
+import Unfollowers from "./screens/Unfollowers";
 import CameraScreen from "./screens/CameraScreen";
 import RecProductDetails from "./screens/RecProductDetails";
-import ArCameraScreen from "./screens/ArCameraScreen";
+import Gaming from "./screens/Gaming";
 import ArProductsScreen from "./screens/ArProductsScreen";
 import ArProductDetails from "./screens/ArProductDetails";
 
@@ -108,32 +108,32 @@ export default function App() {
             />
 
             <Stack.Screen
-              name="Karah"
-              component={Karah}
+              name="TechSchoolScreen"
+              component={TechSchoolScreen}
               options={{
                 headerShown: false,
               }}
             />
 
             <Stack.Screen
-              name="Recommended"
-              component={Recommended}
+              name="Unfollowers"
+              component={Unfollowers}
               options={{
                 headerShown: false,
               }}
             />
 
             <Stack.Screen
-              name="ProductsScreen"
-              component={ProductsScreen}
+              name="EngagementScreen"
+              component={EngagementScreen}
               options={{
                 headerShown: false,
               }}
             />
 
             <Stack.Screen
-              name="ProductDetails"
-              component={ProductDetails}
+              name="ContactScreen"
+              component={ContactScreen}
               options={{
                 headerShown: false,
               }}
@@ -156,8 +156,8 @@ export default function App() {
             />
 
             <Stack.Screen
-              name="ArCameraScreen"
-              component={ArCameraScreen}
+              name="Gaming"
+              component={Gaming}
               options={{
                 headerShown: false,
               }}

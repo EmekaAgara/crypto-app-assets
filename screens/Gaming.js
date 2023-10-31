@@ -3,7 +3,7 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native";
 import { WebView } from "react-native-webview";
 
-export default function ProductsScreen() {
+export default function Gaming() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <ActivityIndicator
@@ -21,6 +21,7 @@ export default function ProductsScreen() {
         domStorageEnabled={true}
         renderLoading={this.IndicatorLoadingView}
         startInLoadingState={true}
+        style={styles.webview}
       />
     </SafeAreaView>
   );
@@ -43,5 +44,13 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
+  },
+  webview: {
+    flex: 1,
+    backgroundColor: "#000",
+    maxWidth: "100%",
+    paddingTop: "10%",
+    // max-width: '100%',
+    // overflow-x: hidden,
   },
 });

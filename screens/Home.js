@@ -16,46 +16,54 @@ const data = [
   {
     id: "1",
     // image: require("../assets/chatbot.png"),
-    image: require("../assets/tride.png"),
+    image: require("../assets/instagram.json"),
     title: "Instagram Unfollowers",
     description: "Get a list of your instagram unnfollowers",
-    screen: "Karah",
+    screen: "Unfollowers",
   },
 
   {
     id: "2",
     // image: require("../assets/recommended.png"),
-    image: require("../assets/tride.png"),
+    image: require("../assets/like.json"),
     title: "Engagements Community",
     description: "For Twitter and Instagram Engagements",
-    screen: "Recommended",
+    screen: "EngagementScreen",
   },
 
   {
     id: "3",
     // image: require("../assets/shopproducts.png"),
-    image: require("../assets/tride.png"),
+    image: require("../assets/learning.json"),
     title: "Tech School",
     description: "Learn a Tech Skill",
-    screen: "ProductsScreen",
+    screen: "TechSchoolScreen",
+  },
+  {
+    id: "6",
+    // image: require("../assets/shopproducts.png"),
+    image: require("../assets/gaming.json"),
+    title: "Gaming Community",
+    description: "Learn a Tech Skill",
+    screen: "Gaming",
   },
 
-  {
-    id: "5",
-    // image: require("../assets/shopproducts.png"),
-    image: require("../assets/tride.png"),
-    title: "About Us",
-    description: "View products in 3D/AR Rendered scene",
-    screen: "ArProductsScreen",
-  },
+  // {
+  //   id: "5",
+  //   // image: require("../assets/shopproducts.png"),
+  //   image: require("../assets/tride.png"),
+  //   title: "About Us",
+  //   description: "View products in 3D/AR Rendered scene",
+  //   screen: "ArProductsScreen",
+  // },
 
   {
     id: "4",
     // image: require("../assets/seller.png"),
-    image: require("../assets/tride.png"),
+    image: require("../assets/contacts.json"),
     title: "Contact Us",
     description: "Create a seller account and sell Products",
-    screen: "ProductsScreen",
+    screen: "ContactScreen",
   },
 ];
 
@@ -81,12 +89,20 @@ const Home = () => {
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate(item.screen)}
             style={styles.ButtonContainer}
           >
-            <Image source={item.image} style={styles.cardImage} />
+            {/* <Image source={item.image} style={styles.cardImage} />
+             */}
+            <Lottie
+              source={item.image}
+              autoPlay
+              loop
+              style={styles.cardImage}
+            />
             <View style={styles.profileContainer}>
               <Text style={styles.mainText}>{item.title}</Text>
               <Text style={styles.descText}>{item.description}</Text>
