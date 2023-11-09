@@ -23,7 +23,7 @@ const Video1 = () => {
   };
 
   const onGetStartedPress = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Login");
   };
 
   return (
@@ -39,9 +39,9 @@ const Video1 = () => {
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Unfollowers For Instagram</Text>
+      <Text style={styles.mainText}>Trade Crypocurrenncy</Text>
       <Text style={styles.subText}>
-        Get a currated List of People that Unfollowed you on Instagram
+        Buy and sell cryptocurrency at the best rates with verified traders
       </Text>
 
       <TouchableOpacity

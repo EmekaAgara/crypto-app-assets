@@ -23,7 +23,7 @@ const Video2 = () => {
   };
 
   const onGetStartedPress = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Login");
   };
 
   return (
@@ -39,9 +39,9 @@ const Video2 = () => {
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Engagement Community</Text>
+      <Text style={styles.mainText}>Create Wallet Address</Text>
       <Text style={styles.subText}>
-        Get Engagements on your posts through our community channels
+        Create wallet addresses to trade and save cryptocurrency
       </Text>
 
       <TouchableOpacity

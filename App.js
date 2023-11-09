@@ -5,12 +5,9 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Welcome from "./screens/Welcome";
 import SplashScreen from "./screens/SplashScreen";
 import SplashScreen1 from "./screens/SplashScreen1";
-import SplashScreen2 from "./screens/SplashScreen2";
 import SplashScreen3 from "./screens/SplashScreen3";
-import SplashScreen4 from "./screens/SplashScreen4";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import Home from "./screens/Home";
@@ -22,7 +19,6 @@ import EngagementScreen from "./screens/EngagementScreen";
 import Pay from "./screens/Pay";
 import TechSchoolScreen from "./screens/TechSchoolScreen";
 import Unfollowers from "./screens/Unfollowers";
-import CameraScreen from "./screens/CameraScreen";
 import RecProductDetails from "./screens/RecProductDetails";
 import Gaming from "./screens/Gaming";
 import ArProductsScreen from "./screens/ArProductsScreen";
@@ -52,32 +48,8 @@ export default function App() {
             />
 
             <Stack.Screen
-              name="SplashScreen2"
-              component={SplashScreen2}
-              options={{
-                headerShown: false,
-              }}
-            />
-
-            <Stack.Screen
               name="SplashScreen3"
               component={SplashScreen3}
-              options={{
-                headerShown: false,
-              }}
-            />
-
-            <Stack.Screen
-              name="SplashScreen4"
-              component={SplashScreen4}
-              options={{
-                headerShown: false,
-              }}
-            />
-
-            <Stack.Screen
-              name="Welcome"
-              component={Welcome}
               options={{
                 headerShown: false,
               }}
@@ -142,14 +114,6 @@ export default function App() {
             <Stack.Screen
               name="RecProductDetails"
               component={RecProductDetails}
-              options={{
-                headerShown: false,
-              }}
-            />
-
-            <Stack.Screen
-              name="CameraScreen"
-              component={CameraScreen}
               options={{
                 headerShown: false,
               }}

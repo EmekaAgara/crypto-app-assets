@@ -19,11 +19,11 @@ const Video4 = () => {
   const navigation = useNavigation();
 
   const onNextPress = () => {
-    navigation.navigate("SplashScreen4");
+    navigation.navigate("SplashScreen");
   };
 
   const onGetStartedPress = () => {
-    navigation.navigate("Home");
+    navigation.navigate("Login");
   };
 
   return (
@@ -39,9 +39,9 @@ const Video4 = () => {
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Partner with Influencers</Text>
+      <Text style={styles.mainText}>Securely Trade</Text>
       <Text style={styles.subText}>
-        Partner with influencers to increase brand awareness, and drive sales.
+        Securely buy and sell trade and save cryptocurrency
       </Text>
 
       <TouchableOpacity

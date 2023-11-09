@@ -8,6 +8,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import React from "react";
+import Lottie from "lottie-react-native";
 import { useNavigation } from "@react-navigation/native";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
@@ -28,8 +29,10 @@ const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.root}>
-        <Image
-          source={require("../assets/karah.png")}
+        <Lottie
+          source={require("../assets/instagram.json")}
+          autoPlay
+          loop
           style={[styles.logo, { height: height * 0.2 }]}
         />
         <Text style={styles.title}>Login to your account</Text>
@@ -72,8 +75,8 @@ const styles = StyleSheet.create({
 
   logo: {
     width: "70%",
-    maxWidth: 150,
-    maxHeight: 150,
+    maxWidth: 120,
+    maxHeight: 160,
     borderRadius: 10,
     resizeMode: "cover",
     alignSelf: "flex-start",
