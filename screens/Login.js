@@ -2,10 +2,9 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
-  TouchableOpacity,
   SafeAreaView,
   useWindowDimensions,
+  Image,
 } from "react-native";
 import React from "react";
 import Lottie from "lottie-react-native";
@@ -25,15 +24,13 @@ const Login = () => {
   const onLoginPressed = () => {
     navigation.navigate("Home");
   };
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.root}>
-        <Lottie
-          source={require("../assets/instagram.json")}
-          autoPlay
-          loop
-          style={[styles.logo, { height: height * 0.2 }]}
+        <Image
+          source={require("../assets/Stridebagde.png")}
+          resizeMode="cover"
+          style={styles.logo}
         />
         <Text style={styles.title}>Login to your account</Text>
         <CustomInput
@@ -74,11 +71,11 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: "70%",
+    width: "100%",
     maxWidth: 120,
     maxHeight: 160,
     borderRadius: 10,
-    resizeMode: "cover",
+    resizeMode: "contain",
     alignSelf: "flex-start",
   },
 

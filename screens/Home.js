@@ -102,7 +102,7 @@ const data = [
 const CardData = [
   {
     id: "3",
-    image: require("../assets/trade1.json"),
+    image: require("../assets/trade.json"),
     description: "Trade",
     screen: "Unfollowers",
   },
@@ -120,7 +120,7 @@ const CardData = [
   },
   {
     id: "6",
-    image: require("../assets/qr1.json"),
+    image: require("../assets/qr.json"),
     description: "QR Code",
     screen: "Unfollowers",
   },

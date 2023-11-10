@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import * as React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import "react-native-gesture-handler";
@@ -11,18 +9,11 @@ import SplashScreen3 from "./screens/SplashScreen3";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import Home from "./screens/Home";
-import { Provider } from "react-redux";
-import ContactScreen from "./screens/ContactScreen";
-import EngagementScreen from "./screens/EngagementScreen";
-import Pay from "./screens/Pay";
-import TechSchoolScreen from "./screens/TechSchoolScreen";
-import Unfollowers from "./screens/Unfollowers";
-import Gaming from "./screens/Gaming";
+import Development from "./screens/Development";
 
 export default function App() {
   const Stack = createStackNavigator();
   return (
-    // <Provider store={store}>
     <NavigationContainer>
       <SafeAreaProvider>
         <Stack.Navigator>
@@ -75,56 +66,14 @@ export default function App() {
           />
 
           <Stack.Screen
-            name="TechSchoolScreen"
-            component={TechSchoolScreen}
+            name="Development"
+            component={Development}
             options={{
               headerShown: false,
-            }}
-          />
-
-          <Stack.Screen
-            name="Unfollowers"
-            component={Unfollowers}
-            options={{
-              headerShown: false,
-            }}
-          />
-
-          <Stack.Screen
-            name="EngagementScreen"
-            component={EngagementScreen}
-            options={{
-              headerShown: false,
-            }}
-          />
-
-          <Stack.Screen
-            name="ContactScreen"
-            component={ContactScreen}
-            options={{
-              headerShown: false,
-            }}
-          />
-
-          <Stack.Screen
-            name="Gaming"
-            component={Gaming}
-            options={{
-              headerShown: false,
-            }}
-          />
-
-          <Stack.Screen
-            name="Pay"
-            component={Pay}
-            options={{
-              headerShown: true,
-              presentation: "modal",
             }}
           />
         </Stack.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>
-    // </Provider>
   );
 }

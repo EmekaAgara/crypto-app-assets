@@ -1,21 +1,11 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { Video } from "expo-av";
-import { StatusBar } from "expo-status-bar";
-import { Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Video2 = () => {
   const video = React.useRef(null);
-  const secondVideo = React.useRef(null);
   const [status, setStatus] = React.useState({});
-  const [statusSecondVideo, setStatusSecondVideo] = React.useState({});
   const navigation = useNavigation();
 
   const onNextPress = () => {
@@ -31,17 +21,17 @@ const Video2 = () => {
       <Video
         ref={video}
         style={styles.video}
-        // source={{uri:'https://emekaagara.com/wp-content/uploads/2023/04/pexels-cottonbro-studio-4008365-1080x2048-50fps.mp4'}}
-        source={require("../assets/engagmentcommunity.mp4")}
+        source={require("../assets/wallet.mp4")}
         shouldPlay
         resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={setStatus}
       />
 
-      <Text style={styles.mainText}>Create Wallet Address</Text>
+      <Text style={styles.mainText}>Create Virtual Cards</Text>
       <Text style={styles.subText}>
-        Create wallet addresses to trade and save cryptocurrency
+        Create virtual cards and wallet addresses to trade and save
+        cryptocurrency
       </Text>
 
       <TouchableOpacity
@@ -74,17 +64,6 @@ const styles = StyleSheet.create({
     right: 0,
   },
 
-  // ButtonContainer: {
-  //   position: "absolute",
-  //   backgroundColor: "#E53F71",
-  //   bottom: 35,
-  //   width: "90%",
-  //   alignSelf: "center",
-  //   padding: 25,
-  //   borderRadius: 10,
-  //   alignItems: "center",
-  // },
-
   ButtonContainer: {
     backgroundColor: "#171515",
     width: "90%",
@@ -98,7 +77,7 @@ const styles = StyleSheet.create({
   },
 
   ButtonContainer2: {
-    backgroundColor: "#7476ED",
+    backgroundColor: "#E53F71",
     width: "90%",
     borderRadius: 5,
     paddingHorizontal: 10,

@@ -2,10 +2,9 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
-  TouchableOpacity,
   SafeAreaView,
   useWindowDimensions,
+  Image,
 } from "react-native";
 import React from "react";
 import Lottie from "lottie-react-native";
@@ -37,11 +36,10 @@ const Signup = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.root}>
-        <Lottie
-          source={require("../assets/instagram.json")}
-          autoPlay
-          loop
-          style={[styles.logo, { height: height * 0.2 }]}
+        <Image
+          source={require("../assets/Stridebagde.png")}
+          resizeMode="cover"
+          style={styles.logo}
         />
         <Text style={styles.title}>Create an account</Text>
         <CustomInput
@@ -49,7 +47,6 @@ const Signup = () => {
           placeholder="Fullname"
           rules={{ required: "Enter your Fullname" }}
         />
-        {/* <CustomInput name="username" placeholder="Username" rules={{required:'Enter your username',}}/> */}
         <CustomInput
           name="email"
           placeholder="Email address"
@@ -111,11 +108,11 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: "70%",
-    maxWidth: 150,
-    maxHeight: 150,
+    width: "100%",
+    maxWidth: 120,
+    maxHeight: 160,
     borderRadius: 10,
-    resizeMode: "cover",
+    resizeMode: "contain",
     alignSelf: "flex-start",
   },
 
