@@ -1,29 +1,20 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  KeyboardAvoidingView,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { FlatList } from "react-native";
 import Lottie from "lottie-react-native";
 import { ImageBackground } from "react-native";
+import CoinItem from "../components/CoinItem";
+import cryptocurrencies from "../assets/data/cryptocurrencies.json";
 
 const data = [
   {
     id: "1",
-    // image: require("../assets/chatbot.png"),
-    image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
-    backgroundImage: require("../assets/card2.png"),
+    backgroundImage: require("../assets/card9.png"),
     screen: "Unfollowers",
   },
 
@@ -35,7 +26,7 @@ const data = [
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
-    backgroundImage: require("../assets/card9.png"),
+    backgroundImage: require("../assets/card7.png"),
     screen: "EngagementScreen",
   },
   {
@@ -92,7 +83,7 @@ const data = [
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
-    backgroundImage: require("../assets/card7.png"),
+    backgroundImage: require("../assets/card2.png"),
     screen: "Unfollowers",
   },
 
@@ -149,7 +140,7 @@ const Home = () => {
       <View style={styles.HeaderContainer}>
         <TouchableOpacity onPress={handlePress}>
           <Text style={styles.HelloText}>Hello John</Text>
-          <Text style={styles.descText1}>Feel free to Explore this App 🚀</Text>
+          <Text style={styles.descText1}>Welcome to this awesome App 👋 </Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btnContainer} onPress={handlePress}>
@@ -168,10 +159,7 @@ const Home = () => {
         keyExtractor={(item) => item.id}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() => navigation.navigate(item.screen)}
-            // style={styles.ButtonContainer}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate(item.screen)}>
             <ImageBackground
               source={item.backgroundImage}
               style={styles.ButtonContainer}
@@ -185,7 +173,6 @@ const Home = () => {
               <View style={styles.profileContainer}>
                 <Image
                   source={require("../assets/Chips.png")}
-                  // resizeMode="cover"
                   style={styles.chipimg}
                 />
               </View>
@@ -220,7 +207,14 @@ const Home = () => {
           </TouchableOpacity>
         )}
       />
-      <Text style={styles.descText2}>Recent Transactions 🚀</Text>
+
+      <Text style={styles.descText2}>Recommended</Text>
+
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={cryptocurrencies}
+        renderItem={({ item }) => <CoinItem marketCoin={item} />}
+      />
     </View>
   );
 };
@@ -230,7 +224,7 @@ export default Home;
 const styles = StyleSheet.create({
   HeaderContainer: {
     display: "flex",
-    // padding: "10%",
+
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -265,14 +259,12 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    // flex: 1,
     backgroundColor: "#000",
     justifyContent: "center",
     paddingBottom: 30,
     paddingTop: 120,
     padding: 6,
     paddingHorizontal: 15,
-    // display: "flex",
   },
 
   HelloText: {
@@ -284,15 +276,11 @@ const styles = StyleSheet.create({
   },
 
   cardImage: {
-    // padding: 55,
-    // margin: 20,
     marginLeft: 4,
-    // marginTop: 1,
+
     height: 70,
     width: 70,
     resizeMode: "contain",
-    // alignSelf: "middle",
-    // position: "absolute",
   },
 
   mainText: {
@@ -319,7 +307,7 @@ const styles = StyleSheet.create({
     fontWeight: 300,
     textAlign: "left",
     paddingLeft: 0,
-    // paddingBottom: 5,
+
     paddingTop: 3,
   },
   nameText: {
@@ -328,7 +316,7 @@ const styles = StyleSheet.create({
     fontWeight: 300,
     textAlign: "left",
     paddingLeft: 0,
-    // paddingBottom: 5,
+
     paddingTop: 4,
   },
   descText1: {
@@ -373,7 +361,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     marginLeft: 0,
     paddingLeft: 16,
-    // flex: 1,
     justifyContent: "center",
   },
 
@@ -384,11 +371,10 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     marginRight: 12,
     paddingRight: 20,
-    // paddingVertical: 10,
+
     borderRadius: 6,
   },
   serviceImg: {
-    // marginRight: 4,
     height: 55,
     width: 35,
     resizeMode: "contain",
