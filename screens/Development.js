@@ -28,26 +28,18 @@ const Development = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.root}>
         <Lottie
-          source={require("../assets/instagram.json")}
+          source={require("../assets/error.json")}
           autoPlay
           loop
           style={[styles.logo, { height: height * 0.2 }]}
         />
-        <Text style={styles.title}>Development screen</Text>
-        <CustomInput
-          name="email"
-          placeholder="Email address"
-          rules={{ required: "Enter your email address" }}
-        />
-        <CustomInput
-          name="password"
-          placeholder="Password"
-          secureTextEntry
-          rules={{ required: "Enter your password" }}
-        />
-        <CustomButton text="Login" onPress={onLoginPressed} />
+        <Text style={styles.title}>
+          Ooops Sorry, this feature is still in Development!!
+        </Text>
+
+        <CustomButton text="Go back" onPress={onLoginPressed} />
         <CustomButton
-          text="Have an account? Sign up"
+          text="Have an account? Sign in"
           onPress={onSignupPressed}
           type="tertiary"
         />
@@ -72,12 +64,12 @@ const styles = StyleSheet.create({
   },
 
   logo: {
-    width: "70%",
+    width: "100%",
     maxWidth: 120,
     maxHeight: 160,
     borderRadius: 10,
-    resizeMode: "cover",
-    alignSelf: "flex-start",
+    resizeMode: "contain",
+    alignSelf: "center",
   },
 
   title: {
@@ -85,7 +77,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     margin: 10,
-    alignSelf: "flex-start",
+    alignSelf: "center",
+    textAlign: "center",
+    paddingBottom: 20,
   },
 
   text: {

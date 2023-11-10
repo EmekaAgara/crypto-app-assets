@@ -15,88 +15,88 @@ const data = [
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card9.png"),
-    screen: "Unfollowers",
+    screen: "Development",
   },
 
   {
     id: "2",
-    // image: require("../assets/recommended.png"),
+
     image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card7.png"),
-    screen: "EngagementScreen",
+    screen: "Development",
   },
   {
     id: "3",
-    // image: require("../assets/chatbot.png"),
+
     image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card11.png"),
-    screen: "Unfollowers",
+    screen: "Development",
   },
 
   {
     id: "4",
-    // image: require("../assets/recommended.png"),
+
     image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card4.png"),
-    screen: "EngagementScreen",
+    screen: "Development",
   },
   {
     id: "5",
-    // image: require("../assets/chatbot.png"),
+
     image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card5.png"),
-    screen: "Unfollowers",
+    screen: "Development",
   },
 
   {
     id: "6",
-    // image: require("../assets/recommended.png"),
+
     image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card6.png"),
-    screen: "EngagementScreen",
+    screen: "Development",
   },
   {
     id: "7",
-    // image: require("../assets/chatbot.png"),
+
     image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card2.png"),
-    screen: "Unfollowers",
+    screen: "Development",
   },
 
   {
     id: "8",
-    // image: require("../assets/recommended.png"),
+
     image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
     name: "John James",
     backgroundImage: require("../assets/card12.png"),
-    screen: "EngagementScreen",
+    screen: "Development",
   },
 ];
 const CardData = [
@@ -104,25 +104,25 @@ const CardData = [
     id: "3",
     image: require("../assets/trade.json"),
     description: "Trade",
-    screen: "Unfollowers",
+    screen: "Development",
   },
   {
     id: "4",
     image: require("../assets/transfer.json"),
     description: "Transfer",
-    screen: "Unfollowers",
+    screen: "Development",
   },
   {
     id: "5",
     image: require("../assets/ben.json"),
     description: "Beneficiaries",
-    screen: "Unfollowers",
+    screen: "Development",
   },
   {
     id: "6",
     image: require("../assets/qr.json"),
     description: "QR Code",
-    screen: "Unfollowers",
+    screen: "Development",
   },
 ];
 
@@ -132,7 +132,7 @@ const Home = () => {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    navigation.navigate("Karah");
+    navigation.navigate("Development");
   };
 
   return (
@@ -140,7 +140,7 @@ const Home = () => {
       <View style={styles.HeaderContainer}>
         <TouchableOpacity onPress={handlePress}>
           <Text style={styles.HelloText}>Hello John</Text>
-          <Text style={styles.descText1}>Welcome to this awesome App 👋 </Text>
+          <Text style={styles.descText1}>Welcome to Stride 👋 </Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btnContainer} onPress={handlePress}>

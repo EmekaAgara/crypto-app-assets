@@ -40,7 +40,7 @@ const CoinItem = ({ marketCoin }) => {
   return (
     <TouchableOpacity
       style={styles.coinContainer}
-      onPress={() => navigation.navigate("CoinDetailedScreen", { coinId: id })}
+      onPress={() => navigation.navigate("Development", { coinId: id })}
     >
       <Image
         source={{ uri: image }}
