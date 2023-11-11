@@ -20,8 +20,6 @@ const data = [
 
   {
     id: "2",
-
-    image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -31,8 +29,6 @@ const data = [
   },
   {
     id: "3",
-
-    image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -43,8 +39,6 @@ const data = [
 
   {
     id: "4",
-
-    image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -54,8 +48,6 @@ const data = [
   },
   {
     id: "5",
-
-    image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -66,8 +58,6 @@ const data = [
 
   {
     id: "6",
-
-    image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -77,8 +67,6 @@ const data = [
   },
   {
     id: "7",
-
-    image: require("../assets/instagram.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
@@ -89,8 +77,6 @@ const data = [
 
   {
     id: "8",
-
-    image: require("../assets/like.json"),
     title: "$5,000,000",
     description: "Total Savings",
     account: "0000 0000 0000 0000",
