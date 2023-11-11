@@ -1,119 +1,14 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Video } from "expo-av";
-import { useNavigation } from "@react-navigation/native";
 
 const Video2 = () => {
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const navigation = useNavigation();
-
-  const onNextPress = () => {
-    navigation.navigate("SplashScreen3");
-  };
-
-  const onGetStartedPress = () => {
-    navigation.navigate("Login");
-  };
-
   return (
-    <View style={styles.container}>
-      <Video
-        ref={video}
-        style={styles.video}
-        source={require("../assets/wallet.mp4")}
-        shouldPlay
-        resizeMode="cover"
-        isLooping
-        onPlaybackStatusUpdate={setStatus}
-      />
-
-      <Text style={styles.mainText}>Create Virtual Cards</Text>
-      <Text style={styles.subText}>
-        Create virtual cards and wallet addresses to trade and save
-        cryptocurrency
-      </Text>
-
-      <TouchableOpacity
-        onPress={onGetStartedPress}
-        style={styles.ButtonContainer}
-      >
-        <Text style={styles.ButtonText}>Get Started</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={onNextPress} style={styles.ButtonContainer2}>
-        <Text style={styles.ButtonText}>Next</Text>
-      </TouchableOpacity>
+    <View>
+      <Text>Video2</Text>
     </View>
   );
 };
 
 export default Video2;
 
-const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-    height: "100%",
-  },
-
-  video: {
-    flex: 1,
-    alignSelf: "stretch",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-  },
-
-  ButtonContainer: {
-    backgroundColor: "#171515",
-    width: "90%",
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginVertical: 6,
-    padding: 18,
-    alignSelf: "center",
-    position: "absolute",
-    bottom: 45,
-  },
-
-  ButtonContainer2: {
-    backgroundColor: "#E53F71",
-    width: "90%",
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginVertical: 6,
-    padding: 18,
-    alignSelf: "center",
-    position: "absolute",
-    bottom: 110,
-  },
-
-  ButtonText: {
-    fontSize: 14,
-    color: "#fff",
-    fontWeight: 700,
-    alignSelf: "center",
-  },
-
-  mainText: {
-    color: "white",
-    fontSize: 26,
-    fontWeight: 600,
-    bottom: 210,
-    width: "90%",
-    padding: 25,
-    paddingBottom: 25,
-    position: "absolute",
-  },
-
-  subText: {
-    color: "white",
-    fontSize: 15,
-    fontWeight: 400,
-    bottom: 170,
-    width: "90%",
-    padding: 25,
-    paddingBottom: 25,
-    position: "absolute",
-  },
-});
+const styles = StyleSheet.create({});

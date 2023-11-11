@@ -1,22 +1,14 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import Video1 from "../components/Video1";
 
 const SplashScreen = () => {
   return (
-    <View style={styles.container}>
-      <Video1 />
+    <View>
+      <Text>SplashScreen</Text>
     </View>
   );
 };
 
 export default SplashScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#000",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingBottom: 0,
-  },
-});
+const styles = StyleSheet.create({});
